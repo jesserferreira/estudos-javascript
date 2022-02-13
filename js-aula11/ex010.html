@@ -28,32 +28,48 @@
         }
     </script>
 
-<!--
-
-    Atividade que aindatenho que fazer!!!!
 
     <h1>Sistema de Nacionalidade</h1>
-    Sua nacionalidade: <input type="text" name="txtnac" id="txtnac">
-    <input type="button" value="Verificar" onclick="avaliar()">
+    Seu país: <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="verificar" onclick="insereTexto()">
     <div id="nacionalidade">
 
     </div>
+<!--
+
+    Exercício incompleto!
 
     <script>
-        function avaliar() {
+        function insereTexto() {
             var txtn = window.document.querySelector('input#txtnac')
             var nacionalidade = window.document.querySelector('div#nacionalidade')
-            var país = 'EUA'
-            console.log (`Vivendo em ${país}`)
-            if (país == 'Brasil') {
-            console.log('Brasileiro!')
+            var rel = Text(txtn.value)
+            var pais = 'Brasil'
+            console.log (`Vivendo em ${rel}`)
+            if (pais == "Brasil") {
+            console.log("Brasileiro!")
+            res.innerHTML += `<p>Sua nacionalidade é: <strong>${rel}</strong><p>`
             } else {
-            console.log('Estrangeiro!')
+            console.log("Estrangeiro!")
+            res.innerHTML += '<p>Você é: <strong>Estrangeiro</strong><p>'
             }
-            res,innerHTML = `<p>Sua nacionalidade é: <strong>Brasileira</strong><p>`
         }
     </script>
 
-    -->
+
+<script type="text/javascript">
+    function insereTexto()
+    {document.getElementById('divTeste').innerHTML = 'Teste inserindo texto.';}
+    </script>
+    
+    </head>
+    <body>
+    
+    <input type='button' onclick='insereTexto()' value='Inserir texto'/><br/>
+    
+    <div id="divTeste"> </div>
+-->
+
+   
 </body>
 </html>
