@@ -11,13 +11,12 @@
     <h1>Sistema de Multas</h1>
     Velocidade do carro: <input type="number" name="txtvel" id="txtvel">km/h.
     <input type="button" value="Verificar" onclick="calcular()">
-    <div id="res">
-
-    </div>
+    <div id="result"></div>
+    
     <script>
         function calcular() {
             var txtv = window.document.querySelector('input#txtvel')
-            var res = window.document.querySelector('div#res')
+            var res = window.document.querySelector('div#result')
             var vel = Number(txtv.value)
             res.innerHTML = `<p>Sua velicidade atual é <strong>${vel}Km/h</strong></p>`
             if (vel > 60) {
@@ -28,48 +27,25 @@
         }
     </script>
 
-
+    <div>
     <h1>Sistema de Nacionalidade</h1>
-    Seu país: <input type="text" name="txtnac" id="txtnac">
-    <input type="button" value="verificar" onclick="insereTexto()">
-    <div id="nacionalidade">
-
-    </div>
-<!--
-
-    Exercício incompleto!
+    Seu país: <input type="text" name="txtnac" id="txtnac" placeholder="País">
+    <input type="button" value="Verificar" onclick="inserePais()">
+    <div id="nacionalidade"></div>
 
     <script>
-        function insereTexto() {
-            var txtn = window.document.querySelector('input#txtnac')
-            var nacionalidade = window.document.querySelector('div#nacionalidade')
-            var rel = Text(txtn.value)
-            var pais = 'Brasil'
-            console.log (`Vivendo em ${rel}`)
-            if (pais == "Brasil") {
-            console.log("Brasileiro!")
-            res.innerHTML += `<p>Sua nacionalidade é: <strong>${rel}</strong><p>`
-            } else {
-            console.log("Estrangeiro!")
-            res.innerHTML += '<p>Você é: <strong>Estrangeiro</strong><p>'
-            }
-        }
+        function inserePais() {
+            var txtnac = document.querySelector('input#txtnac')
+            var nacionalidade = document.querySelector('div#nacionalidade')
+            var pais = "Brasil"
+            var result = txtnac.value
+            
+            if (result === pais) {
+            nacionalidade.innerHTML = `<p>Sua nacionalidade é: ${result}eiro.</p>`
+             } else {
+                nacionalidade.innerHTML = '<p>Você é: <strong>Estrangeiro</strong><p>'
+             }
+             }
     </script>
-
-
-<script type="text/javascript">
-    function insereTexto()
-    {document.getElementById('divTeste').innerHTML = 'Teste inserindo texto.';}
-    </script>
-    
-    </head>
-    <body>
-    
-    <input type='button' onclick='insereTexto()' value='Inserir texto'/><br/>
-    
-    <div id="divTeste"> </div>
--->
-
-   
 </body>
 </html>
